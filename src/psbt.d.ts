@@ -106,6 +106,7 @@ export declare class Psbt {
     addUnknownKeyValToInput(inputIndex: number, keyVal: KeyValue): this;
     addUnknownKeyValToOutput(outputIndex: number, keyVal: KeyValue): this;
     clearFinalizedInput(inputIndex: number): this;
+    witnessStackToScriptWitness(witness: vector): Buffer;
 }
 interface PsbtOptsOptional {
     network?: Network;

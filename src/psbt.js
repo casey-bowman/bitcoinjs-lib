@@ -1,9 +1,6 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 exports.Psbt = void 0;
-exports.Psbt = {
-  witnessStackToScriptWitness: witnessStackToScriptWitness
-}
 const bip174_1 = require('bip174');
 const varuint = require('bip174/src/lib/converter/varint');
 const utils_1 = require('bip174/src/lib/utils');
@@ -1187,7 +1184,7 @@ function sighashTypeToString(sighashType) {
   }
   return text;
 }
-export function witnessStackToScriptWitness(witness) {
+function witnessStackToScriptWitness(witness) {
   let buffer = Buffer.allocUnsafe(0);
   function writeSlice(slice) {
     buffer = Buffer.concat([buffer, Buffer.from(slice)]);
